@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'core/theme.dart';
 import 'core/routes.dart';
 import 'services/storage_service.dart';
@@ -7,16 +8,13 @@ import 'services/storage_service.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialize local storage
   await StorageService.init();
 
-  // Lock to portrait mode
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
 
-  // Set status bar style
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
@@ -24,11 +22,16 @@ void main() async {
     ),
   );
 
-  runApp(const ZenFocusApp());
+  // Check if onboarding is complete
+  final prefs = await SharedPreferences.getInstance();
+  final onboardingComplete = prefs.getBool('onboarding_complete') ?? false;
+
+  runApp(ZenFocusApp(showOnboarding: !onboardingComplete));
 }
 
 class ZenFocusApp extends StatelessWidget {
-  const ZenFocusApp({super.key});
+  final bool showOnboarding;
+  const ZenFocusApp({super.key, required this.showOnboarding});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +39,7 @@ class ZenFocusApp extends StatelessWidget {
       title: 'ZenFocus AI',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.darkTheme,
-      initialRoute: AppRoutes.home,
+      initialRoute: showOnboarding ? AppRoutes.onboarding : AppRoutes.home,
       routes: AppRoutes.routes,
     );
   }
