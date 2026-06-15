@@ -37,7 +37,7 @@ class _ChatScreenState extends State<ChatScreen> {
       _messages.add({
         'role': 'assistant',
         'content':
-            'Assalam o Alaikum! 👋 I\'m ZenFocus AI — your study & wellness companion.\n\nTell me how you\'re feeling, share your deadlines, or just talk. Main yahan hoon 💙',
+            'Assalam o Alaikum! 👋 I\'m Tranquil Study AI — your study & wellness companion.\n\nTell me how you\'re feeling, share your deadlines, or just talk. Main yahan hoon 💙',
       });
     });
   }
@@ -122,7 +122,7 @@ class _ChatScreenState extends State<ChatScreen> {
               ),
             ),
             const SizedBox(width: 8),
-            const Text('ZenFocus AI'),
+            const Text('Tranquil Study AI'),
           ],
         ),
         leading: IconButton(

@@ -1,11 +1,11 @@
-# 🧘 ZenFocus AI
+# 🧘 Tranquil Study AI
 
 A student wellness + academic companion app built with Flutter and powered by AI.
 
 ## Features
 
 - 🧠 **Mind Check-In** — Log mood, energy, and stress levels daily
-- 💬 **AI Companion** — Chat with ZenFocus AI for personalized guidance
+- 💬 **AI Companion** — Chat with Tranquil Study AI for personalized guidance
 - 📅 **Smart Planner** — Manage tasks with deadline tracking
 - 🌿 **Calm Toolkit** — Breathing exercises, grounding, and micro breaks
 
@@ -26,8 +26,8 @@ A student wellness + academic companion app built with Flutter and powered by AI
 
 1. Clone the repository
 ```bash
-   git clone https://github.com/YOUR_USERNAME/zenfocus_ai.git
-   cd zenfocus_ai
+   git clone https://github.com/YOUR_USERNAME/tranquilstudy_ai.git
+   cd tranquilstudy_ai
 ```
 
 2. Install dependencies

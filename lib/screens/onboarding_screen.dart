@@ -18,7 +18,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     {
       'icon': Icons.self_improvement,
       'color': AppTheme.primary,
-      'title': 'Welcome to ZenFocus AI',
+      'title': 'Welcome to Tranquil Study AI',
       'subtitle':
           'Your personal student wellness + academic companion. Designed to help you study smarter and feel better.',
     },
@@ -27,21 +27,21 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       'color': AppTheme.accent,
       'title': 'Track Your Wellbeing',
       'subtitle':
-          'Check in daily with your mood, energy, and stress levels. ZenFocus adapts to how you feel.',
+          'Check in daily with your mood, energy, and stress levels. Tranquil Study adapts to how you feel.',
     },
     {
       'icon': Icons.chat_bubble_outline,
       'color': AppTheme.secondary,
       'title': 'AI That Understands You',
       'subtitle':
-          'Talk to ZenFocus AI anytime. Get personalized study plans, calm techniques, and gentle guidance.',
+          'Talk to Tranquil Study AI anytime. Get personalized study plans, calm techniques, and gentle guidance.',
     },
     {
       'icon': Icons.spa_outlined,
       'color': const Color(0xFF4CAF50),
       'title': 'Balance Focus & Rest',
       'subtitle':
-          'ZenFocus helps you stay productive without burning out. Aapka khayal rakhna hamari zimmedari hai 💙',
+          'Tranquil Study helps you stay productive without burning out. Aapka khayal rakhna hamari zimmedari hai 💙',
     },
   ];
 
@@ -95,7 +95,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           width: 120,
                           height: 120,
                           decoration: BoxDecoration(
-                            color: (page['color'] as Color).withOpacity(0.15),
+                            color: (page['color'] as Color).withValues(
+                              alpha: 0.15,
+                            ),
                             shape: BoxShape.circle,
                           ),
                           child: Icon(
@@ -142,7 +144,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   decoration: BoxDecoration(
                     color: _currentPage == index
                         ? AppTheme.primary
-                        : AppTheme.textSecondary.withOpacity(0.4),
+                        : AppTheme.textSecondary.withValues(alpha: 0.4),
                     borderRadius: BorderRadius.circular(4),
                   ),
                 ),

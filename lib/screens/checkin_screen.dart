@@ -213,7 +213,7 @@ class _CheckInScreenState extends State<CheckInScreen> {
                           ),
                           const SizedBox(width: 8),
                           Text(
-                            'ZenFocus AI says:',
+                            'Tranquil Study AI says:',
                             style: Theme.of(context).textTheme.titleMedium
                                 ?.copyWith(color: AppTheme.primary),
                           ),

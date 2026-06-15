@@ -1,4 +1,4 @@
-package com.example.zenfocus_ai
+package com.example.tranquilstudy_ai
 
 import io.flutter.embedding.android.FlutterActivity
 

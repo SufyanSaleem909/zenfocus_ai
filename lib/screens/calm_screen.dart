@@ -405,6 +405,8 @@ class _CalmScreenState extends State<CalmScreen> with TickerProviderStateMixin {
                   Text(
                     'Notice ${step['number']} ${step['sense']}',
                     style: Theme.of(context).textTheme.bodyLarge,
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 2,
                   ),
                 ],
               ),

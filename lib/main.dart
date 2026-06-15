@@ -36,9 +36,9 @@ class ZenFocusApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ZenFocus AI',
+      title: 'Tranquil Study AI',
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.darkTheme,
+      theme: AppTheme.lightTheme,
       initialRoute: showOnboarding ? AppRoutes.onboarding : AppRoutes.home,
       routes: AppRoutes.routes,
     );

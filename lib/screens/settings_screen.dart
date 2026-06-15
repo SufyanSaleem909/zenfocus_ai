@@ -87,14 +87,16 @@ class SettingsScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      AppTheme.primary.withOpacity(0.2),
-                      AppTheme.secondary.withOpacity(0.1),
+                      AppTheme.primary.withValues(alpha: 0.2),
+                      AppTheme.secondary.withValues(alpha: 0.1),
                     ],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),
                   borderRadius: BorderRadius.circular(16),
-                  border: Border.all(color: AppTheme.primary.withOpacity(0.3)),
+                  border: Border.all(
+                    color: AppTheme.primary.withValues(alpha: 0.3),
+                  ),
                 ),
                 child: Row(
                   children: [
@@ -102,7 +104,7 @@ class SettingsScreen extends StatelessWidget {
                       width: 56,
                       height: 56,
                       decoration: BoxDecoration(
-                        color: AppTheme.primary.withOpacity(0.2),
+                        color: AppTheme.primary.withValues(alpha: 0.2),
                         borderRadius: BorderRadius.circular(14),
                       ),
                       child: const Icon(
@@ -116,7 +118,7 @@ class SettingsScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'ZenFocus AI',
+                          'Tranquil Study AI',
                           style: Theme.of(context).textTheme.headlineMedium,
                         ),
                         Text(
@@ -225,7 +227,7 @@ class SettingsScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'ZenFocus AI is a student wellness and academic companion app. '
+                      'Tranquil Study AI is a student wellness and academic companion app. '
                       'It uses AI to help you balance productivity and mental wellbeing.',
                       style: Theme.of(context).textTheme.bodyLarge,
                     ),
@@ -329,7 +331,7 @@ class SettingsScreen extends StatelessWidget {
           color: AppTheme.card,
           borderRadius: BorderRadius.circular(14),
           border: isDestructive
-              ? Border.all(color: AppTheme.accent.withOpacity(0.3))
+              ? Border.all(color: AppTheme.accent.withValues(alpha: 0.3))
               : null,
         ),
         child: Row(
@@ -337,7 +339,7 @@ class SettingsScreen extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: color.withOpacity(0.15),
+                color: color.withValues(alpha: 0.15),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Icon(icon, color: color, size: 20),

@@ -2,24 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
-  // Colors
-  static const Color primary = Color(0xFF6C63FF);
-  static const Color secondary = Color(0xFF48CAE4);
-  static const Color accent = Color(0xFFFF6584);
-  static const Color background = Color(0xFF0F0E17);
-  static const Color surface = Color(0xFF1A1A2E);
-  static const Color card = Color(0xFF16213E);
-  static const Color textPrimary = Color(0xFFF5F5F5);
-  static const Color textSecondary = Color(0xFFAAAAAA);
+  // New Color Palette
+  static const Color background = Color(0xFFF1F6F9); // Cool Mist
+  static const Color surface = Color(0xFFE4EDF3);
+  static const Color card = Color(0xFFFFFFFF);
+  static const Color textPrimary = Color(0xFF142F43); // Deep Navy
+  static const Color textSecondary = Color(0xFF4A6880);
+  static const Color primary = Color(0xFF3B5B82); // Ocean Blue
+  static const Color secondary = Color(0xFF3B5B82);
+  static const Color accent = Color(0xFFE9A0A8); // Soft Coral
+  static const Color warning = Color(0xFFE9A878);
   static const Color success = Color(0xFF4CAF50);
-  static const Color warning = Color(0xFFFF9800);
 
-  static ThemeData get darkTheme {
+  static ThemeData get lightTheme {
     return ThemeData(
       useMaterial3: true,
-      brightness: Brightness.dark,
+      brightness: Brightness.light,
       scaffoldBackgroundColor: background,
-      colorScheme: const ColorScheme.dark(
+      colorScheme: const ColorScheme.light(
         primary: primary,
         secondary: secondary,
         surface: surface,
@@ -88,7 +88,7 @@ class AppTheme {
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: card,
+        fillColor: surface,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none,

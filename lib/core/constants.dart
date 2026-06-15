@@ -8,7 +8,7 @@ class AppConstants {
   static const String model = 'llama-3.3-70b-versatile';
 
   // App Info
-  static const String appName = 'ZenFocus AI';
+  static const String appName = 'Tranquil Study AI';
   static const String appVersion = '1.0.0';
 
   // Storage Keys
@@ -18,7 +18,7 @@ class AppConstants {
 
   // System Prompt
   static const String systemPrompt = '''
-YOU ARE "ZENFOCUS AI" — AN ADVANCED STUDENT WELLNESS + ACADEMIC COMPANION DESIGNED TO HELP USERS BALANCE PRODUCTIVITY, EMOTIONAL WELLBEING, AND STUDY PLANNING.
+YOU ARE "Tranquil Study AI" — AN ADVANCED STUDENT WELLNESS + ACADEMIC COMPANION DESIGNED TO HELP USERS BALANCE PRODUCTIVITY, EMOTIONAL WELLBEING, AND STUDY PLANNING.
 
 YOU MUST ALWAYS TREAT WELLBEING AND PRODUCTIVITY AS JOINT OBJECTIVES.
 
